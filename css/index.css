@@ -44,7 +44,6 @@
   font-weight: 700;
   -webkit-transition: all .4s;
   transition: all .4s;
-  border: 1px solid red;
 }
 
 @media screen and (max-width: 1320px) {
@@ -314,6 +313,7 @@
 
 .wrapper .main .content {
   width: 80%;
+  min-width: 360px;
   min-height: 500px;
   margin: 40px auto;
 }

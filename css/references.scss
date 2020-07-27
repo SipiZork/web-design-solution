@@ -3,16 +3,24 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
   .ref {
     position: relative;
     width: 400px;
     margin: 30px;
     cursor: pointer;
 
+    @media screen and(max-width: 600px){
+      width: 300px;
+    }
+  
+
     &:hover {
       .cover--name {
         height: 192px;
+
+        @media screen and(max-width: 600px){
+          height: 145px;
+        }
       }
     }
 
@@ -24,13 +32,19 @@
     .ref--pic {
       width: 352px;
       height: 192px;
-      height: 1;
       position: absolute;
       overflow: hidden;
       top: 25px;
       left: 24px;
       z-index: 4;
       border-radius: 2px;
+
+      @media screen and(max-width: 600px){
+        top: 18px;
+        left: 18px;
+        width: 264px;
+        height: 145px;
+      }
 
       img {
         height: 100%;
@@ -54,6 +68,12 @@
       background-color: rgb(156, 206, 255);
       transition: all .4s;
 
+      @media screen and(max-width: 600px){
+        top: 18px;
+        left: 18px;
+        width: 264px;
+      }
+
       a {
         display: block;
         text-decoration: none;
@@ -63,6 +83,10 @@
         color: black;
         text-align: center;
         line-height: 190px;
+
+        @media screen and(max-width: 600px){
+          line-height: 143px;
+        }
       }
     }
   }

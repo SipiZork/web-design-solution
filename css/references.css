@@ -20,8 +20,20 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .all--ref .ref {
+    width: 300px;
+  }
+}
+
 .all--ref .ref:hover .cover--name {
   height: 192px;
+}
+
+@media screen and (max-width: 600px) {
+  .all--ref .ref:hover .cover--name {
+    height: 145px;
+  }
 }
 
 .all--ref .ref .monitor {
@@ -32,13 +44,21 @@
 .all--ref .ref .ref--pic {
   width: 352px;
   height: 192px;
-  height: 1;
   position: absolute;
   overflow: hidden;
   top: 25px;
   left: 24px;
   z-index: 4;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .all--ref .ref .ref--pic {
+    top: 18px;
+    left: 18px;
+    width: 264px;
+    height: 145px;
+  }
 }
 
 .all--ref .ref .ref--pic img {
@@ -71,6 +91,14 @@
   transition: all .4s;
 }
 
+@media screen and (max-width: 600px) {
+  .all--ref .ref .cover--name {
+    top: 18px;
+    left: 18px;
+    width: 264px;
+  }
+}
+
 .all--ref .ref .cover--name a {
   display: block;
   text-decoration: none;
@@ -80,5 +108,11 @@
   color: black;
   text-align: center;
   line-height: 190px;
+}
+
+@media screen and (max-width: 600px) {
+  .all--ref .ref .cover--name a {
+    line-height: 143px;
+  }
 }
 /*# sourceMappingURL=references.css.map */
