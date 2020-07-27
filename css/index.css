@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+.wrapper {
+  min-height: 150vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #353535;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  z-index: 20;
+}
+
+.wrapper .header.shrink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+
+.wrapper .header.shrink .logo {
+  width: 560px;
+}
+
+.wrapper .header.shrink .logo img {
+  width: 130px;
+}
+
+.wrapper .header.shrink .logo h1 {
+  line-height: 50px;
+}
+
+.wrapper .header .logo {
+  width: 630px;
+  height: 100%;
+  font-family: 'Rowdies', cursive;
+  font-weight: 700;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+@media screen and (max-width: 1320px) {
+  .wrapper .header .logo {
+    width: 200px;
+  }
+}
+
+.wrapper .header .logo img {
+  width: 200px;
+  height: 80%;
+  margin-top: 1%;
+  float: left;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-right: 30px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.wrapper .header .logo h1 {
+  line-height: 100px;
+  font-size: 2.2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#73b8ff), color-stop(49%, #64abff), to(#2382ff));
+  background: linear-gradient(90deg, #73b8ff 0%, #64abff 49%, #2382ff 100%);
+  float: left;
+  color: #2382ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+@media screen and (max-width: 1320px) {
+  .wrapper .header .logo h1 {
+    display: none;
+  }
+}
+
+.wrapper .header .nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.2rem;
+}
+
+.wrapper .header .nav a {
+  text-decoration: none;
+}
+
+.wrapper .header .nav a .nav--link {
+  padding: 15px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper .header .nav a .nav--link.active p {
+  color: black;
+}
+
+.wrapper .header .nav a .nav--link.active .hover--bg {
+  height: 100%;
+  background-color: #818080;
+}
+
+.wrapper .header .nav a .nav--link p {
+  position: relative;
+  z-index: 5;
+  color: #73b8ff;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.wrapper .header .nav a .nav--link:hover p {
+  color: black;
+}
+
+.wrapper .header .nav a .nav--link:hover .hover--bg {
+  height: 100%;
+}
+
+.wrapper .header .nav a .nav--link .hover--bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #818080;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  z-index: 4;
+}
+
+.wrapper .main {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+.wrapper .main .main--pic {
+  position: relative;
+  height: 550px;
+}
+
+.wrapper .main .main--pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper .main .main--pic h2 {
+  font-family: 'Rowdies', cursive;
+  font-weight: 100;
+  font-size: 3.5rem;
+  color: #2382ff;
+  text-shadow: 2px 2px black;
+}
+
+.wrapper .main .main--pic h2:nth-of-type(1) {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+
+.wrapper .main .main--pic h2:nth-last-child(1) {
+  position: absolute;
+  bottom: 60px;
+  left: 150px;
+}
+
+.wrapper .main .content {
+  width: 80%;
+  min-height: 500px;
+  margin: 40px auto;
+}
+
+.wrapper .main .content .content--box:not(:nth-last-child(1)) {
+  margin-bottom: 40px;
+}
+
+.wrapper .main .content .content--box:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.wrapper .main .content .content--box.img--right .content--image {
+  float: right;
+  margin: 0 0 20px 40px;
+}
+
+.wrapper .main .content .content--box.img--left .content--image {
+  float: left;
+  margin: 0 40px 20px 0;
+}
+
+.wrapper .main .content .content--box .content--image {
+  border: 1px solid green;
+  width: 600px;
+  height: 300px;
+}
+
+.wrapper .main .content .content--box .content--image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper .main .content .content--box .content--text {
+  position: relative;
+  z-index: 5;
+  padding: 20px 0;
+}
+
+.wrapper .main .content .content--box .content--text h2 {
+  font-size: 3rem;
+  color: #17437c;
+  position: relative;
+  z-index: 5;
+}
+
+.wrapper .main .content .content--box .content--text hr {
+  margin-bottom: 20px;
+  border: 0.5px solid #2382ff;
+  position: relative;
+  top: -8px;
+}
+
+.wrapper .main .content .content--box .content--text p {
+  text-align: justify;
+  font-size: 1.06rem;
+  line-height: 1.5rem;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,69 @@
+.all--ref {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .ref {
+    position: relative;
+    width: 400px;
+    margin: 30px;
+    cursor: pointer;
+
+    &:hover {
+      .cover--name {
+        height: 192px;
+      }
+    }
+
+    .monitor {
+      width: 100%;
+      height: 100%;
+    }
+
+    .ref--pic {
+      width: 352px;
+      height: 192px;
+      height: 1;
+      position: absolute;
+      overflow: hidden;
+      top: 25px;
+      left: 24px;
+      z-index: 4;
+      border-radius: 2px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .cover--name {
+      width: 352px;
+      height: 0;
+      height: 1;
+      position: absolute;
+      overflow: hidden;
+      top: 25px;
+      left: 24px;
+      z-index: 4;
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(156, 206, 255);
+      transition: all .4s;
+
+      a {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+        line-height: 190px;
+      }
+    }
+  }
+}

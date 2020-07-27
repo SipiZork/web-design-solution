@@ -1,0 +1,84 @@
+.all--ref {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.all--ref .ref {
+  position: relative;
+  width: 400px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.all--ref .ref:hover .cover--name {
+  height: 192px;
+}
+
+.all--ref .ref .monitor {
+  width: 100%;
+  height: 100%;
+}
+
+.all--ref .ref .ref--pic {
+  width: 352px;
+  height: 192px;
+  height: 1;
+  position: absolute;
+  overflow: hidden;
+  top: 25px;
+  left: 24px;
+  z-index: 4;
+  border-radius: 2px;
+}
+
+.all--ref .ref .ref--pic img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.all--ref .ref .cover--name {
+  width: 352px;
+  height: 0;
+  height: 1;
+  position: absolute;
+  overflow: hidden;
+  top: 25px;
+  left: 24px;
+  z-index: 4;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9cceff;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.all--ref .ref .cover--name a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+  line-height: 190px;
+}
+/*# sourceMappingURL=references.css.map */
