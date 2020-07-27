@@ -6,7 +6,7 @@ const motivation = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 const links = document.querySelectorAll('.link');
 const content = document.querySelector('.right--content');
 let loadedContent = 'us'; 
-content.innerHTML = motivation;
+content.innerHTML = us;
 let load = false;
 
 const loadContent = (clickedLink, queryContent) => {
