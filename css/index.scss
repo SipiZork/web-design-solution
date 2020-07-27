@@ -25,9 +25,8 @@
       height: 50px;
 
       .logo {
-        width: 560px;
         img {
-          width: 130px;
+          
         }
         h1 {
           line-height: 50px;
@@ -41,6 +40,7 @@
       font-family: 'Rowdies', cursive;
       font-weight: 700;
       transition: all .4s;
+      border: 1px solid red;
 
       @media screen and (max-width: 1320px) {
         width: 200px;
@@ -73,11 +73,136 @@
       }
     }
 
+    .menu--btn {
+      display: none;
+      overflow: hidden;
+      z-index: 2;
+      cursor: pointer;
+
+      &:hover:not(.open) {
+        .menu--btn--line {
+          &:before {
+            width: 60%;
+            transform: translate(18px, 3px) rotate(45deg);
+          }
+
+          &:after {
+            width: 60%;
+            transform: translate(18px, -3px) rotate(-45deg);
+          }
+        }
+      }
+
+      &.open {
+        .menu--btn--line {
+          transform: translateX(-50px);
+
+          &:before {
+            transform: translate(50px, 12px) rotate(45deg);
+          }
+
+          &:after {
+            transform: translate(50px, -12px) rotate(-45deg);
+          }
+        }
+
+        &:hover {
+          .menu--btn--line {
+
+            &:before {
+              width: 60%;
+              transform: translate(50px, 20px) rotate(45deg);
+            }
+  
+            &:after {
+              width: 60%;
+              transform: translate(50px, -20px) rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      .menu--btn--line {
+        width: 80%;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        transition: all .4s;
+        border-radius: 10px;
+
+        &:after,
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          top: -12px;
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          border-radius: 10px;
+          transition: all .4s;
+        }
+
+        &:after {
+          top: 12px;
+        }
+      }
+
+      @media screen and (max-width:989px) {
+        display: block;
+        position: fixed;
+        width: 50px;
+        height: 60px;
+        top: 20px; 
+        left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.shrink {
+          top: -5px;
+        }
+      }
+    }
+
     .nav {
       height: 100%;
       display: flex;
       align-items: flex-end;
       font-size: 1.2rem;
+
+      @media screen and (max-width:989px) {
+        position: fixed;
+        width: 200px;
+        height: 100vh;
+        top: 0;
+        left: -200px;
+        flex-direction: column;
+        z-index: 1;
+        background-color: rgb(53, 53, 53);
+        transition: all .4s;
+        align-items: flex-start;
+
+        &.shrink {
+          a {
+            &:nth-child(1) {
+              margin-top: 50px;
+            }
+          }
+        }
+
+        &.open {
+          transform: translateX(200px);
+        }
+
+        a {
+          width: 100%;
+
+          &:nth-child(1) {
+            margin-top: 100px;
+          }
+        }
+      }
       
       a {
         text-decoration: none;
